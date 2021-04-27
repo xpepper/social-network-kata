@@ -1,21 +1,14 @@
 package com.xpepper.kata;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
+import java.io.Console;
 
 public class AppRunner {
     public static void main(String[] args) {
-        try (BufferedReader reader = consoleReader()) {
-            while (true) {
-                String inputCommand = reader.readLine();
-                System.out.println(inputCommand);
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
+        Console console = System.console();
 
-    private static BufferedReader consoleReader() {
-        return new BufferedReader(new InputStreamReader(System.in));
+        while (true) {
+            String inputCommand = console.readLine();
+            System.out.println(inputCommand);
+        }
     }
 }
