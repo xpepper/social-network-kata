@@ -8,7 +8,7 @@ public class AppRunner {
 
         while (true) {
             String inputCommand = console.readLine();
-            System.out.println(inputCommand);
+            console.writer().println(inputCommand);
         }
     }
 }
